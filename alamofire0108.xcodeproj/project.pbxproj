@@ -13,7 +13,7 @@
 		B2F3FA8D1C3F6CB400E34D78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F3FA8B1C3F6CB400E34D78 /* LaunchScreen.storyboard */; };
 		B2F3FA951C3F6CE200E34D78 /* MainTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F3FA941C3F6CE200E34D78 /* MainTVC.swift */; };
 		B2F3FA971C3F6CF600E34D78 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F3FA961C3F6CF600E34D78 /* MainCell.swift */; };
-		B2F3FA991C3F6E4D00E34D78 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F3FA981C3F6E4D00E34D78 /* File.swift */; };
+		B2F3FA9B1C3FA97400E34D78 /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F3FA9A1C3FA97400E34D78 /* PostVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		B2F3FA8E1C3F6CB400E34D78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2F3FA941C3F6CE200E34D78 /* MainTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTVC.swift; sourceTree = "<group>"; };
 		B2F3FA961C3F6CF600E34D78 /* MainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
-		B2F3FA981C3F6E4D00E34D78 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		B2F3FA9A1C3FA97400E34D78 /* PostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
 		E6656DC85ADE7539C9692B6A /* Pods-alamofire0108.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alamofire0108.debug.xcconfig"; path = "Pods/Target Support Files/Pods-alamofire0108/Pods-alamofire0108.debug.xcconfig"; sourceTree = "<group>"; };
 		FF203E80709B6CB1EACE08BE /* Pods_alamofire0108.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_alamofire0108.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -83,7 +83,7 @@
 				B2F3FA821C3F6CB400E34D78 /* AppDelegate.swift */,
 				B2F3FA941C3F6CE200E34D78 /* MainTVC.swift */,
 				B2F3FA961C3F6CF600E34D78 /* MainCell.swift */,
-				B2F3FA981C3F6E4D00E34D78 /* File.swift */,
+				B2F3FA9A1C3FA97400E34D78 /* PostVC.swift */,
 				B2F3FA891C3F6CB400E34D78 /* Assets.xcassets */,
 				B2F3FA8B1C3F6CB400E34D78 /* LaunchScreen.storyboard */,
 				B2F3FA8E1C3F6CB400E34D78 /* Info.plist */,
@@ -213,8 +213,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2F3FA951C3F6CE200E34D78 /* MainTVC.swift in Sources */,
-				B2F3FA991C3F6E4D00E34D78 /* File.swift in Sources */,
 				B2F3FA831C3F6CB400E34D78 /* AppDelegate.swift in Sources */,
+				B2F3FA9B1C3FA97400E34D78 /* PostVC.swift in Sources */,
 				B2F3FA971C3F6CF600E34D78 /* MainCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

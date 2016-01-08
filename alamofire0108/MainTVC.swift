@@ -23,7 +23,7 @@ class MainTVC: UITableViewController {
         
         self.tableView.rowHeight = 100
         
-        alamofireDownload()
+        alamofireGET()
 
         
     }
@@ -35,7 +35,7 @@ class MainTVC: UITableViewController {
 
         self.tableView.registerClass(MainCell.self, forCellReuseIdentifier: "cell")
         
-
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "jsutUpload:")
         
         
         
@@ -43,7 +43,7 @@ class MainTVC: UITableViewController {
     
     
     
-    func alamofireDownload()
+    func alamofireGET()
     {
         let url = "https://sheetsu.com/apis/1261d3fb"
         
@@ -51,7 +51,6 @@ class MainTVC: UITableViewController {
                
                 if let JSON = response.result.value
                 {
-                    //print("JSON: \(JSON)")
                     self.jsonArray = JSON["result"] as! NSMutableArray
                     print("\(self.jsonArray)")
                     
@@ -73,6 +72,17 @@ class MainTVC: UITableViewController {
                 }////
             
         }
+        
+    }
+    
+    
+    
+    func jsutUpload(sender:UIButton)
+    {
+        let controller = PostVC()
+        
+        self.presentViewController(controller, animated: true, completion: nil)
+        
         
     }
     
@@ -100,13 +110,26 @@ class MainTVC: UITableViewController {
     {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! MainCell
 
+        let dicForCell = self.jsonArray[indexPath.row] as! NSDictionary
         
-        cell.nameLabel.text = self.nameArray[indexPath.row]
-        cell.idLabel.text = self.cityArray[indexPath.row] 
+        cell.nameLabel.text = dicForCell["name"] as? String
+        cell.idLabel.text = dicForCell["city"] as? String
         
         return cell
     }
     
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
+    {
+
+        if editingStyle == .Delete
+        {
+            let url = "https://sheetsu.com/apis/1261d3fb/\(self.jsonArray[indexPath.row])"
+            Alamofire.request(.DELETE, url)
+            
+            alamofireGET()
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
